@@ -1,0 +1,313 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffcd6;
+}
+
+header {
+  display: flex;
+  padding: 5px 15%;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 400px;
+  box-shadow: 7px 4px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #03045e;
+}
+
+.sticky-top {
+  position: sticky;
+  top: 0;
+  background-color: #fbf8cc;
+  z-index: 1000;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-list li {
+  padding: 0 1rem;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #03045e;
+  font-weight: bold;
+}
+
+.nav-list a:hover {
+  color: #007bff;
+}
+
+.resume-button {
+  padding: 0.5rem 1rem;
+  background: #ffd700;
+  border: none;
+  color: #03045e;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.resume-button:hover {
+  background: #cca700;
+}
+
+main {
+  padding: 2rem;
+}
+
+.introduction {
+  text-align: left;
+  width: 100%;
+  position: relative;
+  margin: 20% 0;
+}
+
+.introduction h2 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  color: #03045e;
+}
+
+.introduction h3 {
+  font-size: 3rem;
+  color: #03045e;
+}
+
+.introduction p {
+  font-size: 1em;
+  color: #03045e;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: left;
+  gap: 20px;
+  margin: 0 15%;
+}
+
+.profile-picture img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 5px 9px 11px 2px rgba(0, 0, 0, 0.2);
+}
+
+.project-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.project-button-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px; /* 按钮字体大小 */
+}
+
+.project-button-container button:hover {
+  background-color: #0056b3;
+}
+
+.project-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.project-button-container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.project-button-container button:hover {
+  background-color: #0056b3;
+}
+
+.about-section {
+  margin-left: 15%;
+  margin-right: 15%;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-section h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #cca600;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.self-intro h3 {
+  color: #cca600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.self-intro p,
+.about-section ul {
+  margin-bottom: 15px;
+  color: #4a3f0a;
+}
+
+.me {
+  display: flex;
+  align-items: center; /* 垂直居中对齐文本和图片 */
+  flex-wrap: wrap; /* 允许内容换行，以适应不同屏幕尺寸 */
+}
+
+.me p {
+  flex: 1; /* 使文本占据可用空间 */
+  margin-right: 20px; /* 在图片的左侧添加一些间距 */
+}
+
+.selfie {
+  flex-shrink: 0; /* 防止图片被压缩 */
+  width: 200px; /* 调整图片的宽度 */
+  height: auto; /* 保持图片的纵横比 */
+  border-radius: 10px; /* 可选：给图片添加圆角效果 */
+}
+
+.hobbies-list {
+  columns: 2; /* Splits the list into two columns */
+  -webkit-columns: 2; /* For Safari and Chrome */
+  -moz-columns: 2; /* For Firefox */
+  list-style-type: none; /* Removes the default list bullet */
+  padding: 0; /* Removes the default padding */
+}
+
+.hobbies-list li {
+  margin-bottom: 10px; /* Adds some space between the list items */
+}
+
+.about-section ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}
+
+.about-section li {
+  margin-bottom: 5px;
+}
+
+.project-head {
+  color: #80b055;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.project-title a {
+  color: #4D6340; 
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  margin: 0 10%;
+}
+
+.project-title a:hover {
+  text-decoration: underline;
+}
+
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+  gap: 5px; 
+  margin: 0 8%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif
+}
+
+.project-block {
+  background-color: #FAFFEB;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto; 
+}
+
+.project-description {
+  color: #4D6340;
+  margin: 5px 8%; 
+}
+
+.project-features li {
+  font-size: 0.7rem;
+  color: #4D6340;
+  list-style: inside disc
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fffcd6;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 4px;
+}
+
+.contact-item {
+  color: #b39500;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #b39500;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin: 15px 0;
+}

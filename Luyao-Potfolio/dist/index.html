@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 何路遥作品集</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luyao's Portfolio</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- Navigation Bar -->
+    <header class="sticky-top">
+      <h1 class="header-title">Luyao's Portfolio「作品集」</h1>
+      <nav class="nav-bar">
+        <ul class="nav-list">
+          <li v-for="item in menuItems" :key="item.text">
+            <a href="#" v-on:click.prevent="selectSection(item.section)">{{ item.text }}</a>
+          </li>
+        </ul>
+        <a href="https://assets.codepen.io/10914207/%E4%BD%95%E8%B7%AF%E9%81%A5-%E7%AE%80%E5%8E%86+.pdf" class="resume-button" download="Luyao_He_Resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Home Section -->
+      <section v-if="selectedSection === 'home'">
+        <div class="content">
+          <div class="introduction">
+            <h3>Hello, I am</h3>
+            <h2>{{ name }}</h2>
+            <p>I am actively seeking job opportunities in UI/UX Design and Web Front-End Development.<br>我正在积极寻找用户界面/体验设计和Web前端开发方面的工作机会。</p>
+          </div>
+          <div class="profile-picture">
+            <img src="https://assets.codepen.io/10914207/IMG_9323.jpg" alt="Profile Picture" />
+          </div>
+        </div>
+        <div class="project-button-container">
+          <button @click="selectSection('projects')">点击查看项目</button>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section" v-if="selectedSection === 'about'">
+        <h2>About Me 「关于我」</h2>
+        <div class="self-intro">
+          <h3><b>「我是谁？</b></h3>
+          <div class="me">
+            <p>何路遥，哥伦比亚大学教育技术与媒体专业的研究生，对UI设计怀有浓厚兴趣。我的UI设计之旅起始于对教育软件开发的热情，促使我深入学习HTML，CSS和JavaScript。这段学习经历为我在web前端开发方面打下了坚实的基础。此外，我还参与了移动学习项目，实践了Figma在UI和交互设计方面的应用。<br>I am Luyao He, a passionate graduate student at Columbia University, specializing in Instructional Technology and Media. My journey into UI design began with a keen interest in creating educational software, driving me to explore the realms of HTML, CSS, and JavaScript. This exploration laid the groundwork for my skills in web front-end development. Moreover, my involvement in a mobile learning project has equipped me with practical experience in UI and interaction design using Figma.
+            </p>
+            <img src="https://assets.codepen.io/10914207/7562990F-4305-4D17-AF01-9429F8A5A200_1_105_c.jpeg" class="selfie">
+          </div>
+          <h3><b>「性格</b></h3>
+          <p>As an <b>ENFJ</b> according to the Myers-Briggs Type Indicator (MBTI), I am known for my enthusiasm, empathy, and a strong desire to help others. I am a planner at heart, with a structured approach to life that aids me in executing imaginative and creative tasks efficiently in front-end development and UI design. Additionally, I have a voracious appetite for learning and embrace the evolution of technology.<br>
+            根据迈尔斯-布里格斯类型指标（MBTI），我是ENFJ类型，以热情、同理心和帮助他人的强烈愿望著称。我是一个天生的规划者，对生活有条不紊的安排，这帮助我在前端开发和UI设计中高效地完成富有想象力和创造力的任务。此外，我热衷于学习，乐于接受新技术的发展。</p>
+          <h3><b>「爱好</b></h3>
+          <ul class="hobbies-list">
+            <li>Traveling 旅行</li>
+            <li>Music 音乐</li>
+            <li>Yoga 瑜伽</li>
+            <li>Movies 电影</li>
+            <li>Jellycat Collection 收集玩偶</li>
+            <li>Photography 摄影</li>
+            <li>Handcrafting 手工</li>
+            <li>Board and Mobile Games 桌游/手游</li>
+          </ul>
+          <h3><b>「技能</b></h3>
+          <ul>
+            <li><b>Programming Languages 编程语言:</b> HTML/CSS, JavaScript, Python, LaTeX, Google Firebase</li>
+            <li><b>Languages 语言:</b> English (Full Professional), Mandarin (Native), Spanish (Elementary)</li>
+            <li><b>Content Creation 内容创作: </b>Blogging with WordPress, Video Editing with iMovie (Short Films, Podcasts)</li>
+            <li><b>Data Analysis 数据分析:</b> SPSS, Microsoft Excel</li>
+            <li><b>UI/UX Design UI、UX设计: </b>Figma, AppSheet</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+<section v-if="selectedSection === 'projects'" class="projects-container">
+    <h2 class="project-head">Projects「项目」</h2>
+    <div class="projects-grid">
+        <div class="project-block" v-for="project in projects" :key="project.title">
+            <h3 class="project-title">
+                <a :href="project.link" target="_blank">{{ project.title }}</a>
+            </h3>
+            <p class="project-description">{{ project.description }}</p>
+            <img :src="project.image" alt="Project Image" class="project-image">
+            <ul class="project-features">
+                <li v-for="feature in project.features" :key="feature" v-html="feature"></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+  <footer>
+    <div class="contact-info">
+      <div class="contact-item">电话: 13761364898</div>
+      <div class="contact-item">邮箱: lh3220@tc.columbia.edu</div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/luyao-he-133787208" target="_blank">LinkedIn 领英</a> |
+      <a href="https://www.instagram.com/luyao.1?igsh=eWFuem9pYnhtMjJm&utm_source=qr" target="_blank">Instagram</a>|
+      <a href="https://thoughtsict.wordpress.com/" target="_blank">个人博客：ThoughtsICT</a>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Luyao He</p>
+    </div>
+  </footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.37/vue.global.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
